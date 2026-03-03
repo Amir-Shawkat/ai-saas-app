@@ -4,7 +4,7 @@ import Link from "next/link";
 const Cta = () => {
   return (
     <section className="cta-section">
-        <div className="cta-badge">Start Kearning your way.</div>
+        <div className="cta-badge">Start Learning your way.</div>
         <h2 className="text-3xl font-bold">Build and Personalize Learning Companion</h2>
         <p className="text-lg">Pick a name, subject, voice & personality - and start learning through voice conversation that fell natural and funny.</p>
         <Image src="images/cta.svg" width={362} height={232} alt="CTA" />

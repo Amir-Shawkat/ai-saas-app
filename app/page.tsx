@@ -20,7 +20,7 @@ const Page = () => {
         
         <CompanionCard 
           id="456"
-          name="COuntsy the Number Wizard"
+          name="Countsy the Number Wizard"
           topic="Derivatives and Integrals"
           subject="maths"
           duration={30}
