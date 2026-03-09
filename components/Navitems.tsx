@@ -13,7 +13,7 @@ const navitems = [
 const Navitems = () => {
     const pathname = usePathname()  
 
-     return (
+    return (
       
     <nav className="flex items-center gap-4">
         {navitems.map(({label, href}) => (
