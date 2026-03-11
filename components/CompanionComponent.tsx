@@ -7,6 +7,7 @@ import Image from "next/image";
 import Lottie, { LottieRefCurrentProps } from "lottie-react";
 import soundwaves from "@/constants/soundwaves.json";
 import { set } from "zod";
+import { addToSessionHistory } from "@/lib/actions/companion.actions";
 
 
 
@@ -38,7 +39,10 @@ const CompanionComponent = ({ name, subject, topic, title, companionId, userName
 
     useEffect(() => {
         const onCallStart = () => setCallStatus(CallStatus.ACTIVE);
-        const onCallEnd = () => setCallStatus(CallStatus.FINISHED);
+        const onCallEnd = () => {
+            setCallStatus(CallStatus.FINISHED);
+            addToSessionHistory(companionId)    
+        }
         const onMessage = (message: Message) => {
             if (message.type === "transcript" && message.transcriptType === "final") {
                 const newMessage = {role: message.role, content: message.transcript};
