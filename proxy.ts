@@ -1,6 +1,7 @@
 import { clerkMiddleware } from '@clerk/nextjs/server';
 
-export default clerkMiddleware();
+// 1. Change 'export default' to 'export const proxy'
+export const proxy = clerkMiddleware();
 
 export const config = {
   matcher: [
